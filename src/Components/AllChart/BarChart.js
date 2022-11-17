@@ -1,8 +1,6 @@
 import { Bar } from "react-chartjs-2";
-import fullData from "../../context/fulldata";
 
-const BarChart = () => {
-  console.log(fullData);
+const BarChart = ({ data, name }) => {
   return (
     <div className="chart-container">
       <Bar
@@ -18,8 +16,8 @@ const BarChart = () => {
           ],
           datasets: [
             {
-              label: "Chiffres bimestriels",
-              data: fullData["2020"].chart1,
+              label: name,
+              data: data,
               backgroundColor: [
                 "rgba(255, 99, 132, 0.8)",
                 "rgba(54, 162, 235, 0.8)",
